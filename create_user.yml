@@ -1,0 +1,15 @@
+---
+- name: TEST_AWX
+
+  tasks:
+
+  - name: create user
+    user: 
+        name: usertestowy
+        createhome: true
+        state: present
+        shell: /bin/bash
+        comment: test123user
+        password: "{{ 'password' | password_hash('sha512') }}"
+        update_password: on_create
+        groups: wheel
