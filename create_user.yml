@@ -1,6 +1,6 @@
 ---
 - name: TEST_AWX
-- hosts``: all
+  hosts: all
 
   tasks:
 
